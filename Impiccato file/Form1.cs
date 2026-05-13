@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace Impiccato_file
 {
     public partial class Form1 : Form
@@ -15,6 +17,16 @@ namespace Impiccato_file
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            button28.BackColor = Color.Azure;
         }
     }
 }
