@@ -56,13 +56,15 @@
             button25 = new Button();
             button26 = new Button();
             label2 = new Label();
-            button27 = new Button();
-            button28 = new Button();
-            button29 = new Button();
-            button30 = new Button();
+            sport = new Button();
+            animali = new Button();
+            film = new Button();
             label3 = new Label();
             button31 = new Button();
             button32 = new Button();
+            button27 = new Button();
+            button33 = new Button();
+            button34 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -316,47 +318,40 @@
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(89, 92);
             label2.Name = "label2";
-            label2.Size = new Size(165, 25);
+            label2.Size = new Size(170, 25);
             label2.TabIndex = 27;
-            label2.Text = "Scegli la difficoltà:";
+            label2.Text = "Scegli la categoria:";
             label2.Click += label2_Click;
             // 
-            // button27
+            // sport
             // 
-            button27.Location = new Point(0, 0);
-            button27.Name = "button27";
-            button27.Size = new Size(75, 23);
-            button27.TabIndex = 28;
-            button27.Text = "button27";
-            button27.UseVisualStyleBackColor = true;
+            sport.Location = new Point(133, 137);
+            sport.Name = "sport";
+            sport.Size = new Size(75, 23);
+            sport.TabIndex = 29;
+            sport.Text = "Sport";
+            sport.UseVisualStyleBackColor = true;
+            sport.Click += button28_Click;
             // 
-            // button28
+            // animali
             // 
-            button28.Location = new Point(133, 137);
-            button28.Name = "button28";
-            button28.Size = new Size(75, 23);
-            button28.TabIndex = 29;
-            button28.Text = "Facile";
-            button28.UseVisualStyleBackColor = true;
-            button28.Click += button28_Click;
+            animali.Location = new Point(133, 179);
+            animali.Name = "animali";
+            animali.Size = new Size(75, 23);
+            animali.TabIndex = 30;
+            animali.Text = "Animali";
+            animali.UseVisualStyleBackColor = true;
+            animali.Click += button29_Click;
             // 
-            // button29
+            // film
             // 
-            button29.Location = new Point(133, 179);
-            button29.Name = "button29";
-            button29.Size = new Size(75, 23);
-            button29.TabIndex = 30;
-            button29.Text = "Medio";
-            button29.UseVisualStyleBackColor = true;
-            // 
-            // button30
-            // 
-            button30.Location = new Point(133, 226);
-            button30.Name = "button30";
-            button30.Size = new Size(75, 23);
-            button30.TabIndex = 31;
-            button30.Text = "Difficile";
-            button30.UseVisualStyleBackColor = true;
+            film.Location = new Point(133, 226);
+            film.Name = "film";
+            film.Size = new Size(75, 23);
+            film.TabIndex = 31;
+            film.Text = "Film";
+            film.UseVisualStyleBackColor = true;
+            film.Click += button30_Click;
             // 
             // label3
             // 
@@ -386,18 +381,46 @@
             button32.Text = "Genera la parola";
             button32.UseVisualStyleBackColor = true;
             // 
+            // button27
+            // 
+            button27.Location = new Point(133, 137);
+            button27.Name = "button27";
+            button27.Size = new Size(75, 23);
+            button27.TabIndex = 35;
+            button27.Text = "Facile";
+            button27.UseVisualStyleBackColor = true;
+            button27.Click += button27_Click;
+            // 
+            // button33
+            // 
+            button33.Location = new Point(133, 179);
+            button33.Name = "button33";
+            button33.Size = new Size(75, 23);
+            button33.TabIndex = 36;
+            button33.Text = "Medio";
+            button33.UseVisualStyleBackColor = true;
+            // 
+            // button34
+            // 
+            button34.Location = new Point(133, 226);
+            button34.Name = "button34";
+            button34.Size = new Size(75, 23);
+            button34.TabIndex = 37;
+            button34.Text = "Difficile";
+            button34.UseVisualStyleBackColor = true;
+            button34.Click += button34_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1444, 450);
+            ClientSize = new Size(996, 450);
             Controls.Add(button32);
             Controls.Add(button31);
             Controls.Add(label3);
-            Controls.Add(button30);
-            Controls.Add(button29);
-            Controls.Add(button28);
-            Controls.Add(button27);
+            Controls.Add(film);
+            Controls.Add(animali);
+            Controls.Add(sport);
             Controls.Add(label2);
             Controls.Add(button26);
             Controls.Add(button25);
@@ -426,6 +449,9 @@
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(button27);
+            Controls.Add(button33);
+            Controls.Add(button34);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -463,12 +489,14 @@
         private Button button25;
         private Button button26;
         private Label label2;
-        private Button button27;
-        private Button button28;
-        private Button button29;
-        private Button button30;
+        private Button sport;
+        private Button animali;
+        private Button film;
         private Label label3;
         private Button button31;
         private Button button32;
+        private Button button27;
+        private Button button33;
+        private Button button34;
     }
 }
