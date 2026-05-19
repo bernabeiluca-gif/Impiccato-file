@@ -5,6 +5,7 @@ namespace Impiccato_file
     public partial class Form1 : Form
     {
         string categoria = "";
+        string parolaScelta = "";
         public Form1()
         {
             InitializeComponent();
@@ -61,21 +62,104 @@ namespace Impiccato_file
 
         private void button34_Click(object sender, EventArgs e)
         {
+            if (categoria == "Sport")
+            {
+                Random random = new Random();
+                int indexScelto = random.Next(1, 6);
+                int posizioneriga = 0;
 
+                using (StreamReader sr = new StreamReader("sport_classificati.csv"))
+                {
+                    string riga = sr.ReadLine();
+
+                    while (riga != null)
+                    {
+                        if (posizioneriga == indexScelto)
+                        {
+                            string[] pezzi = riga.Split(';');
+                            parolaScelta = pezzi[2];
+
+                        }
+                        posizioneriga++;
+                        riga = sr.ReadLine();
+                    }
+                }
+            }
         }
 
         private void button27_Click(object sender, EventArgs e)
         {
             if (categoria == "Sport")
             {
+                Random random = new Random();
+                int indexScelto = random.Next(1, 6);
+                int posizioneriga = 0;
 
-                using(StreamReader sr = new StreamReader("sport_classificati.csv"))
+                using (StreamReader sr = new StreamReader("sport_classificati.csv"))
                 {
                     string riga = sr.ReadLine();
 
                     while (riga != null)
                     {
-                        string[] pezzi = riga.Split(";");
+                        if (posizioneriga == indexScelto)
+                        {
+                            string[] pezzi = riga.Split(';');
+                            parolaScelta = pezzi[0];
+
+                        }
+                        posizioneriga++;
+                        riga = sr.ReadLine();
+                    }
+                }
+            }
+
+            else if (categoria == "animali")
+            {
+                Random random = new Random();
+                int indexScelto = random.Next(1, 6);
+                int posizioneriga = 0;
+
+                using (StreamReader sr = new StreamReader("sport_classificati.csv"))
+                {
+                    string riga = sr.ReadLine();
+
+                    while (riga != null)
+                    {
+                        if (posizioneriga == indexScelto)
+                        {
+                            string[] pezzi = riga.Split(';');
+                            parolaScelta = pezzi[0];
+
+                        }
+                        posizioneriga++;
+                        riga = sr.ReadLine();
+                    }
+                }
+            }
+            
+
+        private void button33_Click(object sender, EventArgs e)
+        {
+            if (categoria == "Sport")
+            {
+                Random random = new Random();
+                int indexScelto = random.Next(1, 6);
+                int posizioneriga = 0;
+
+                using (StreamReader sr = new StreamReader("sport_classificati.csv"))
+                {
+                    string riga = sr.ReadLine();
+
+                    while (riga != null)
+                    {
+                        if (posizioneriga == indexScelto)
+                        {
+                            string[] pezzi = riga.Split(';');
+                            parolaScelta = pezzi[1];
+
+                        }
+                        posizioneriga++;
+                        riga = sr.ReadLine();
                     }
                 }
             }

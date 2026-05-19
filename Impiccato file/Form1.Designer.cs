@@ -4,6 +4,9 @@
     {
         /// <summary>
         ///  Required designer variable.
+        /// 
+        ///
+        /// 
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
@@ -62,7 +65,7 @@
             label3 = new Label();
             button31 = new Button();
             button32 = new Button();
-            button27 = new Button();
+            Bottonefacile = new Button();
             button33 = new Button();
             button34 = new Button();
             SuspendLayout();
@@ -325,7 +328,7 @@
             // 
             // sport
             // 
-            sport.Location = new Point(133, 137);
+            sport.Location = new Point(214, 137);
             sport.Name = "sport";
             sport.Size = new Size(75, 23);
             sport.TabIndex = 29;
@@ -335,7 +338,7 @@
             // 
             // animali
             // 
-            animali.Location = new Point(133, 179);
+            animali.Location = new Point(214, 179);
             animali.Name = "animali";
             animali.Size = new Size(75, 23);
             animali.TabIndex = 30;
@@ -345,7 +348,7 @@
             // 
             // film
             // 
-            film.Location = new Point(133, 226);
+            film.Location = new Point(214, 226);
             film.Name = "film";
             film.Size = new Size(75, 23);
             film.TabIndex = 31;
@@ -381,15 +384,15 @@
             button32.Text = "Genera la parola";
             button32.UseVisualStyleBackColor = true;
             // 
-            // button27
+            // Bottonefacile
             // 
-            button27.Location = new Point(133, 137);
-            button27.Name = "button27";
-            button27.Size = new Size(75, 23);
-            button27.TabIndex = 35;
-            button27.Text = "Facile";
-            button27.UseVisualStyleBackColor = true;
-            button27.Click += button27_Click;
+            Bottonefacile.Location = new Point(133, 137);
+            Bottonefacile.Name = "Bottonefacile";
+            Bottonefacile.Size = new Size(75, 23);
+            Bottonefacile.TabIndex = 35;
+            Bottonefacile.Text = "Facile";
+            Bottonefacile.UseVisualStyleBackColor = true;
+            Bottonefacile.Click += button27_Click;
             // 
             // button33
             // 
@@ -399,6 +402,7 @@
             button33.TabIndex = 36;
             button33.Text = "Medio";
             button33.UseVisualStyleBackColor = true;
+            button33.Click += button33_Click;
             // 
             // button34
             // 
@@ -449,7 +453,7 @@
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(button27);
+            Controls.Add(Bottonefacile);
             Controls.Add(button33);
             Controls.Add(button34);
             Name = "Form1";
@@ -495,7 +499,7 @@
         private Label label3;
         private Button button31;
         private Button button32;
-        private Button button27;
+        private Button Bottonefacile;
         private Button button33;
         private Button button34;
     }
