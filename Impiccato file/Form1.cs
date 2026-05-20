@@ -6,6 +6,8 @@ namespace Impiccato_file
     {
         string categoria = "";
         string parolaScelta = "";
+        string tratti = "";
+        char[] parola;
         public Form1()
         {
             InitializeComponent();
@@ -60,7 +62,7 @@ namespace Impiccato_file
             sport.Visible = false;
         }
 
-        private void button34_Click(object sender, EventArgs e)
+        private void button34_Click(object sender, EventArgs e) //Difficoltà difficile
         {
             if (categoria == "Sport")
             {
@@ -76,7 +78,7 @@ namespace Impiccato_file
                     {
                         if (posizioneriga == indexScelto)
                         {
-                            string[] pezzi = riga.Split(';');
+                            string[] pezzi = riga.Split(',');
                             parolaScelta = pezzi[2];
 
                         }
@@ -84,10 +86,75 @@ namespace Impiccato_file
                         riga = sr.ReadLine();
                     }
                 }
+                parola = parolaScelta.ToCharArray();
+                for (int i = 0; i < parola.Length; i++)
+                {
+                    tratti = tratti + "-";
+                }
+                label4.Text = tratti;
+            }
+            else if (categoria == "Animali")
+            {
+                Random random = new Random();
+                int indexScelto = random.Next(1, 6);
+                int posizioneriga = 0;
+
+                using (StreamReader sr = new StreamReader("animali_classificati.csv"))
+                {
+                    string riga = sr.ReadLine();
+
+                    while (riga != null)
+                    {
+                        if (posizioneriga == indexScelto)
+                        {
+                            string[] pezzi = riga.Split(',');
+                            parolaScelta = pezzi[2];
+
+                        }
+                        posizioneriga++;
+                        riga = sr.ReadLine();
+                    }
+                }
+                parola = parolaScelta.ToCharArray();
+                for (int i = 0; i < parola.Length; i++)
+                {
+                    tratti = tratti + "-";
+                }
+                label4.Text = tratti;
+            }
+            else if (categoria == "Film")
+            {
+                Random random = new Random();
+                int indexScelto = random.Next(1, 6);
+                int posizioneriga = 0;
+
+                using (StreamReader sr = new StreamReader("film_classificati.csv"))
+                {
+                    string riga = sr.ReadLine();
+
+                    while (riga != null)
+                    {
+                        if (posizioneriga == indexScelto)
+                        {
+                            string[] pezzi = riga.Split(',');
+                            parolaScelta = pezzi[2];
+
+
+                        }
+                        posizioneriga++;
+                        riga = sr.ReadLine();
+                    }
+                }
+                parola = parolaScelta.ToCharArray();
+                for (int i = 0; i < parola.Length; i++)
+                {
+                    tratti = tratti + "-";
+                }
+                label4.Text = tratti;
             }
         }
 
-        private void button27_Click(object sender, EventArgs e)
+        private void button27_Click(object sender, EventArgs e) //Difficoltà facile
         {
             if (categoria == "Sport")
             {
@@ -103,7 +170,7 @@ namespace Impiccato_file
                     {
                         if (posizioneriga == indexScelto)
                         {
-                            string[] pezzi = riga.Split(';');
+                            string[] pezzi = riga.Split(',');
                             parolaScelta = pezzi[0];
 
                         }
@@ -111,15 +178,20 @@ namespace Impiccato_file
                         riga = sr.ReadLine();
                     }
                 }
+                parola = parolaScelta.ToCharArray();
+                for (int i = 0; i < parola.Length; i++)
+                {
+                    tratti = tratti + "-";
+                }
+                label4.Text = tratti;
             }
-
-            else if (categoria == "animali")
+            else if (categoria == "Animali")
             {
                 Random random = new Random();
                 int indexScelto = random.Next(1, 6);
                 int posizioneriga = 0;
 
-                using (StreamReader sr = new StreamReader("sport_classificati.csv"))
+                using (StreamReader sr = new StreamReader("animali_classificati.csv"))
                 {
                     string riga = sr.ReadLine();
 
@@ -127,7 +199,7 @@ namespace Impiccato_file
                     {
                         if (posizioneriga == indexScelto)
                         {
-                            string[] pezzi = riga.Split(';');
+                            string[] pezzi = riga.Split(',');
                             parolaScelta = pezzi[0];
 
                         }
@@ -135,10 +207,47 @@ namespace Impiccato_file
                         riga = sr.ReadLine();
                     }
                 }
+                parola = parolaScelta.ToCharArray();
+                for (int i = 0; i < parola.Length; i++)
+                {
+                    tratti = tratti + "-";
+                }
+                label4.Text = tratti;
             }
-            
+            else if (categoria == "Film")
+            {
+                Random random = new Random();
+                int indexScelto = random.Next(1, 6);
+                int posizioneriga = 0;
 
-        private void button33_Click(object sender, EventArgs e)
+                using (StreamReader sr = new StreamReader("film_classificati.csv"))
+                {
+                    string riga = sr.ReadLine();
+
+                    while (riga != null)
+                    {
+                        if (posizioneriga == indexScelto)
+                        {
+                            string[] pezzi = riga.Split(',');
+                            parolaScelta = pezzi[0];
+
+                        }
+                        posizioneriga++;
+                        riga = sr.ReadLine();
+                    }
+                }
+                parola = parolaScelta.ToCharArray();
+                for (int i = 0; i < parola.Length; i++)
+                {
+                    tratti = tratti + "-";
+                }
+                label4.Text = tratti;
+
+            }
+        }
+
+
+        private void button33_Click(object sender, EventArgs e) //Difficoltà media
         {
             if (categoria == "Sport")
             {
@@ -154,7 +263,7 @@ namespace Impiccato_file
                     {
                         if (posizioneriga == indexScelto)
                         {
-                            string[] pezzi = riga.Split(';');
+                            string[] pezzi = riga.Split(',');
                             parolaScelta = pezzi[1];
 
                         }
@@ -162,7 +271,83 @@ namespace Impiccato_file
                         riga = sr.ReadLine();
                     }
                 }
+                parola = parolaScelta.ToCharArray();
+                for (int i = 0; i < parola.Length; i++)
+                {
+                    tratti = tratti + "-";
+                }
+                label4.Text = tratti;
             }
+            else if (categoria == "Animali")
+            {
+                Random random = new Random();
+                int indexScelto = random.Next(1, 6);
+                int posizioneriga = 0;
+
+                using (StreamReader sr = new StreamReader("animali_classificati.csv"))
+                {
+                    string riga = sr.ReadLine();
+
+                    while (riga != null)
+                    {
+                        if (posizioneriga == indexScelto)
+                        {
+                            string[] pezzi = riga.Split(',');
+                            parolaScelta = pezzi[1];
+
+                        }
+                        posizioneriga++;
+                        riga = sr.ReadLine();
+                    }
+                }
+                parola = parolaScelta.ToCharArray();
+                for (int i = 0; i < parola.Length; i++)
+                {
+                    tratti = tratti + "-";
+                }
+                label4.Text = tratti;
+
+            }
+            else if (categoria == "Film")
+            {
+                Random random = new Random();
+                int indexScelto = random.Next(1, 6);
+                int posizioneriga = 0;
+
+                using (StreamReader sr = new StreamReader("film_classificati.csv"))
+                {
+                    string riga = sr.ReadLine();
+
+                    while (riga != null)
+                    {
+                        if (posizioneriga == indexScelto)
+                        {
+                            string[] pezzi = riga.Split(',');
+                            parolaScelta = pezzi[1];
+
+                        }
+                        posizioneriga++;
+                        riga = sr.ReadLine();
+                    }
+                }
+                parola=parolaScelta.ToCharArray();
+
+                for (int i = 0; i < parola.Length; i++)
+                {
+                    tratti = tratti + "-";
+                }
+                label4.Text = tratti;
+            }
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
