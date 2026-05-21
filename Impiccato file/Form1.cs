@@ -6,8 +6,9 @@ namespace Impiccato_file
     {
         string categoria = "";
         string parolaScelta = "";
-        string tratti = "";
+        char[] tratti;
         char[] parola;
+        char lettera;
         public Form1()
         {
             InitializeComponent();
@@ -87,11 +88,12 @@ namespace Impiccato_file
                     }
                 }
                 parola = parolaScelta.ToCharArray();
+                tratti = new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
-                    tratti = tratti + "-";
+                    tratti[i] = '-';
                 }
-                label4.Text = tratti;
+                label4.Text = new string(tratti);
             }
             else if (categoria == "Animali")
             {
@@ -116,11 +118,12 @@ namespace Impiccato_file
                     }
                 }
                 parola = parolaScelta.ToCharArray();
+                tratti = new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
-                    tratti = tratti + "-";
+                    tratti[i] = '-'; 
                 }
-                label4.Text = tratti;
+                label4.Text = new string(tratti);
             }
             else if (categoria == "Film")
             {
@@ -146,11 +149,12 @@ namespace Impiccato_file
                     }
                 }
                 parola = parolaScelta.ToCharArray();
+                tratti = new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
-                    tratti = tratti + "-";
+                    tratti[i] = '-';
                 }
-                label4.Text = tratti;
+                label4.Text = new string(tratti);
             }
         }
 
@@ -179,11 +183,12 @@ namespace Impiccato_file
                     }
                 }
                 parola = parolaScelta.ToCharArray();
+                tratti = new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
-                    tratti = tratti + "-";
+                    tratti[i] = '-';
                 }
-                label4.Text = tratti;
+                label4.Text = new string(tratti);
             }
             else if (categoria == "Animali")
             {
@@ -208,11 +213,12 @@ namespace Impiccato_file
                     }
                 }
                 parola = parolaScelta.ToCharArray();
+                tratti = new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
-                    tratti = tratti + "-";
+                    tratti[i] = '-';
                 }
-                label4.Text = tratti;
+                label4.Text = new string(tratti);
             }
             else if (categoria == "Film")
             {
@@ -237,11 +243,12 @@ namespace Impiccato_file
                     }
                 }
                 parola = parolaScelta.ToCharArray();
+                tratti = new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
-                    tratti = tratti + "-";
+                    tratti[i] = '-';
                 }
-                label4.Text = tratti;
+                label4.Text = new string(tratti);
 
             }
         }
@@ -272,11 +279,12 @@ namespace Impiccato_file
                     }
                 }
                 parola = parolaScelta.ToCharArray();
+                tratti = new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
-                    tratti = tratti + "-";
+                    tratti[i] = '-';
                 }
-                label4.Text = tratti;
+                label4.Text = new string(tratti);
             }
             else if (categoria == "Animali")
             {
@@ -301,11 +309,12 @@ namespace Impiccato_file
                     }
                 }
                 parola = parolaScelta.ToCharArray();
+                tratti = new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
-                    tratti = tratti + "-";
+                    tratti[i] = '-';
                 }
-                label4.Text = tratti;
+                label4.Text = new string(tratti);
 
             }
             else if (categoria == "Film")
@@ -330,13 +339,14 @@ namespace Impiccato_file
                         riga = sr.ReadLine();
                     }
                 }
-                parola=parolaScelta.ToCharArray();
+                parola = parolaScelta.ToCharArray();
 
+                tratti=new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
-                    tratti = tratti + "-";
+                    tratti[i] = '-';
                 }
-                label4.Text = tratti;
+                label4.Text = new string(tratti);
             }
         }
 
@@ -347,7 +357,21 @@ namespace Impiccato_file
 
         private void label4_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lettera = 'a';
+            for(int i = 0; i < parola.Length; i++)
+            {
+                if(parola[i] == lettera)
+                {
+                    tratti[i] = lettera;
+                }
+                
+            }
+            label4.Text = new string(tratti);
         }
     }
 }
