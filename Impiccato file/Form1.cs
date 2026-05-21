@@ -9,11 +9,56 @@ namespace Impiccato_file
         char[] tratti;
         char[] parola;
         char lettera;
+        int tentativi = 6;
+        bool letteratrovata = false;
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void cambio()
+        {
+            label2.Text = "Scegli la difficoltà:";
+
+
+
+
+            sport.Visible = false;
+            animali.Visible = false;
+            film.Visible = false;
+        }
+        private void inserimento()
+        {
+            letteratrovata = false;
+            for (int i = 0; i < parola.Length; i++)
+            {
+                if (parola[i] == lettera)
+                {
+                    tratti[i] = lettera;
+                    letteratrovata = true;
+                }
+
+            }
+            label4.Text = new string(tratti);
+
+            if (letteratrovata == false)
+            {
+                tentativi--;
+                label6.Text="Tentativi:" + tentativi;
+                if (tentativi <= 0)
+                {
+                    label3.Text = "HAI PERSO!";
+                    label5.Text = "La parola era: " + parolaScelta;
+                    return;
+                }
+                
+            }
+            else if (!label4.Text.Contains('-'))
+            {
+                label3.Text = "COMPLIMENTI HAI VINTO!";
+            }
+
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -31,36 +76,27 @@ namespace Impiccato_file
 
         private void button28_Click(object sender, EventArgs e)
         {
-            label2.Text = "Scegli la difficoltà:";
-
             categoria = "Sport";
-
-
-            sport.Visible = false;
-            animali.Visible = false;
-            film.Visible = false;
+            cambio();
+            tentativi = 6;
         }
 
         private void button29_Click(object sender, EventArgs e)
         {
-            label2.Text = "Scegli la difficoltà:";
+
 
             categoria = "Animali";
-
-            animali.Visible = false;
-            sport.Visible = false;
-            film.Visible = false;
+            cambio();
+            tentativi = 6;
         }
 
         private void button30_Click(object sender, EventArgs e)
         {
-            label2.Text = "Scegli la difficoltà:";
+
 
             categoria = "Film";
-
-            film.Visible = false;
-            animali.Visible = false;
-            sport.Visible = false;
+            cambio();
+            tentativi=6;
         }
 
         private void button34_Click(object sender, EventArgs e) //Difficoltà difficile
@@ -121,7 +157,7 @@ namespace Impiccato_file
                 tratti = new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
-                    tratti[i] = '-'; 
+                    tratti[i] = '-';
                 }
                 label4.Text = new string(tratti);
             }
@@ -341,7 +377,7 @@ namespace Impiccato_file
                 }
                 parola = parolaScelta.ToCharArray();
 
-                tratti=new char[parola.Length];
+                tratti = new char[parola.Length];
                 for (int i = 0; i < parola.Length; i++)
                 {
                     tratti[i] = '-';
@@ -360,18 +396,169 @@ namespace Impiccato_file
 
         }
 
+
+        //Lettere
+
         private void button1_Click(object sender, EventArgs e)
         {
             lettera = 'a';
-            for(int i = 0; i < parola.Length; i++)
-            {
-                if(parola[i] == lettera)
-                {
-                    tratti[i] = lettera;
-                }
-                
-            }
-            label4.Text = new string(tratti);
+            inserimento();
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            lettera = 'b';
+            inserimento();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            lettera = 'c';
+            inserimento();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            lettera = 'd';
+            inserimento();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            lettera = 'e';
+            inserimento();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            lettera = 'f';
+            inserimento();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            lettera = 'g';
+            inserimento();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            lettera = 'h';
+            inserimento();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            lettera = 'i';
+            inserimento();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            lettera = 'j';
+            inserimento();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            lettera = 'k';
+            inserimento();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            lettera = 'l';
+            inserimento();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            lettera = 'm';
+            inserimento();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            lettera = 'n';
+            inserimento();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            lettera = 'o';
+            inserimento();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            lettera = 'p';
+            inserimento();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            lettera = 'q';
+            inserimento();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            lettera = 'r';
+            inserimento();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            lettera = 's';
+            inserimento();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            lettera = 't';
+            inserimento();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            lettera = 'u';
+            inserimento();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            lettera = 'v';
+            inserimento();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            lettera = 'w';
+            inserimento();
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            lettera = 'x';
+            inserimento();
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            lettera = 'y';
+            inserimento();
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            lettera = 'z';
+            inserimento();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
